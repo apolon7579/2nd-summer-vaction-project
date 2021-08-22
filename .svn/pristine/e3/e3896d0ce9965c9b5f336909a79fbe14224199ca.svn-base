@@ -1,0 +1,45 @@
+package com.newlecture.web.controller.customer;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/")
+public class HomeController {
+	
+	// '/' 로 구분된 주소일경우 WEB-INF View Resolver 에서 처리
+	// '.' 로 구분된 주소일경우 Tiles View Resolver 에서 처리
+	@RequestMapping("")
+	public String index() {
+		return "customer.index";
+	}
+	
+	@RequestMapping("/list")
+	public String list() {
+		
+		return "customer.list";
+	}
+	
+	@RequestMapping("/detail")
+	public String detail() {
+		return "customer.detail";
+	}
+	
+	@RequestMapping("/cart")
+	public String cart() {
+		
+		return "customer.cart";
+	}
+	
+	@RequestMapping("/checkout")
+	public String checkOut() {
+		
+		return "customer.checkout";
+	}
+	
+	@RequestMapping("/contact")
+	public String contact() {
+		
+		return "customer.contact";
+	}
+}
